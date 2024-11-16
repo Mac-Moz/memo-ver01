@@ -1,0 +1,29 @@
+{
+    "action": {
+        "default_title": "UrlMemo",
+        "default_icon": "pasty48.png",
+        "default_popup": "index.html"
+    },
+    // "browser_specific_settings": {
+    //     "gecko": {
+    //         "id": "{99489097-f01c-473b-ac99-ae706b5b7b96}",
+    //         "strict_min_version": "109.0"
+    //     }
+    // },
+    "description": "Cromeで開かれているタブからURLを取得する",
+    "icons": {
+        "128": "pasty128.png",
+        "48": "pasty48.png"
+    },
+    "manifest_version": 3,
+    "name": "UrlMemo",
+    "version": "1.0",
+    "permissions": [
+        "tabs"
+    ],
+    "content_scripts":[
+        {
+            "matches":["<all_urls>"],
+        "js":["jquery.js", "set.js"]}
+    ]
+}
